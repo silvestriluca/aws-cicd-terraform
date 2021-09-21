@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- Codepipeline for multiple branches
+- Codebuild job
+- Parameter store entries
+- KMS keys
+- S3 buckets for states & artifacts
+- Codestar connections
 
 ## [0.1.0] - 2021-09-21
 ### Added
