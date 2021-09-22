@@ -170,7 +170,7 @@ resource "aws_codepipeline" "codepipeline" {
   }
 
   stage {
-    name = "IaC_Plan_Execution"
+    name = "Build"
 
     action {
       name             = "Terraform_Plan"
@@ -211,7 +211,12 @@ resource "aws_codepipeline" "codepipeline" {
   }
 
   stage {
-    name = "IaC_Plan_Approval"
+    name = "Test"
+
+  }
+
+  stage {
+    name = "Approve"
 
     action {
       name             = "Approve"
@@ -228,7 +233,12 @@ resource "aws_codepipeline" "codepipeline" {
   }
 
   stage {
-    name = "IaC_Apply"
+    name = "Publish"
+
+  }
+
+  stage {
+    name = "Deploy"
 
     action {
       name             = "Terraform_Apply"
